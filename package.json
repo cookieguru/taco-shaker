@@ -1,0 +1,23 @@
+{
+  "name": "taco-shaker",
+  "version": "0.1.0",
+  "main": "dist/app.js",
+  "private": true,
+  "scripts": {
+    "test": "npm run build && npm run lint",
+    "lint": "tslint --project . 'src/**/*.ts' 'src/**/*.tsx'",
+    "build": "tsc -p .",
+    "watch": "tsc -w -p .",
+    "start": "npm-run-all --parallel watch serve",
+    "serve": "tabris serve"
+  },
+  "dependencies": {
+    "marked-ts": "^1.0.0-beta.4",
+    "tabris": "^2.6.2"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.3",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.1"
+  }
+}
